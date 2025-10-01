@@ -1,0 +1,57 @@
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:black;
+  overflow:hidden;
+  font-family: Arial, sans-serif;
+  color:white;
+}
+
+#trollBtn{
+  z-index:20;
+  padding:14px 26px;
+  font-size:20px;
+  cursor:pointer;
+  border-radius:8px;
+  border:none;
+  background:linear-gradient(90deg,#ff5f6d,#ffc371);
+  color:#111;
+}
+
+#message{
+  position:absolute;
+  top:10%;
+  left:50%;
+  transform:translateX(-50%) translateY(-10px);
+  font-size:48px;
+  font-weight:700;
+  opacity:0;
+  z-index:18;
+  text-shadow:0 4px 12px rgba(0,0,0,0.6);
+}
+
+#doakes{
+  position:absolute;
+  bottom:-10%;
+  left:50%;
+  transform:translate(-50%,100px);
+  max-width:85vw;
+  width:412px;
+  opacity:0;
+  z-index:17;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.show-doakes{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+.show-message{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+  transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+}
